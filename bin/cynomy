@@ -4,7 +4,7 @@
  * create by afterloe
  * MIT License
  *
- * bin/cynomy 
+ * bin/cynomy
  */
 "use strict";
 
@@ -22,6 +22,7 @@ program.
 		program.outputHelp();
 	});
 
+// 安装框架
 program.
 	command("install").
 	description("安装cynomy系列软件").
@@ -29,12 +30,12 @@ program.
 		console.log("安装cynomy框架");
 	});
 
+// 创建文件
 program.
 	command("c <file>").
 	description("创建文件").
-	action(file => {
-		console.log("create file: %s", file);
-	});
+	option("-o, --o <dir>", "存放目录").
+	action((file = "index.js", options) => require(resolve(__dirname, "..", "lib", "createFile"))(file, options));
 
 if (process.argv.length < 3 ) {
 	process.argv.push("help");
