@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "cynomy命令行工具",
   "main": "index.js",
+  "bin": {
+	"cynomy": "./bin/cynomy"	  
+  },
   "scripts": {
     "test": "mocha test/*_test.js"
   },
@@ -18,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/afterloe/cynomy/issues"
   },
-  "homepage": "https://github.com/afterloe/cynomy#readme"
+  "homepage": "https://github.com/afterloe/cynomy#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }

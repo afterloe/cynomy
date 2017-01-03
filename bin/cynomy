@@ -1,0 +1,42 @@
+#! /usr/bin/env node
+
+/**
+ * create by afterloe
+ * MIT License
+ *
+ * bin/cynomy 
+ */
+"use strict";
+
+const [program, {resolve}] = [require("commander"), require("path")];
+const config = require(resolve(__dirname, "..", "config"));
+
+// 设置cynomy客户端命令行版本
+program.version(config.get("version"));
+
+// help 命令
+program.
+	command("help").
+	description("显示使用帮助").
+	action(() => {
+		program.outputHelp();
+	});
+
+program.
+	command("install").
+	description("安装cynomy系列软件").
+	action(() => {
+		console.log("安装cynomy框架");
+	});
+
+program.
+	command("c <file>").
+	description("创建文件").
+	action(file => {
+		console.log("create file: %s", file);
+	});
+
+if (process.argv.length < 3 ) {
+	process.argv.push("help");
+}
+program.parse(process.argv);
