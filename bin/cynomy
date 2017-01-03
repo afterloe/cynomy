@@ -35,7 +35,7 @@ program.
 	command("c <file>").
 	description("创建文件").
 	option("-o, --o <dir>", "存放目录").
-	action((file = "index.js", options) => require(resolve(__dirname, "..", "lib", "createFile"))(file, options));
+	action((file, options) => require(resolve(__dirname, "..", "lib", "createFile"))(file, options));
 
 if (process.argv.length < 3 ) {
 	process.argv.push("help");

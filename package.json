@@ -4,7 +4,7 @@
   "description": "cynomy命令行工具",
   "main": "index.js",
   "bin": {
-	"cynomy": "./bin/cynomy"	  
+    "cynomy": "./bin/cynomy"
   },
   "scripts": {
     "test": "mocha test/*_test.js"
@@ -24,5 +24,10 @@
   "homepage": "https://github.com/afterloe/cynomy#readme",
   "dependencies": {
     "commander": "^2.9.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0"
   }
 }
