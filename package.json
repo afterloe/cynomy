@@ -1,0 +1,22 @@
+{
+  "name": "cynomy",
+  "version": "0.0.1",
+  "description": "cynomy命令行工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/afterloe/cynomy.git"
+  },
+  "keywords": [
+    "cynomy"
+  ],
+  "author": "afterloe <lm6289511@gmail.com> (https://github.com/afterloe)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afterloe/cynomy/issues"
+  },
+  "homepage": "https://github.com/afterloe/cynomy#readme"
+}
