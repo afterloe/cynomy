@@ -34,7 +34,7 @@ program.
 program.
 	command("c <file>").
 	description("创建文件").
-	option("-o, --o <dir>", "存放目录").
+	option("-t, --type <type>", "文件类型").
 	action((file, options) => require(resolve(__dirname, "..", "lib", "createFile"))(file, options));
 
 if (process.argv.length < 3 ) {
