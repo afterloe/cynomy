@@ -13,6 +13,7 @@ const {resolve} = require("path");
 const [configRoule, pkg] = [new Map(), require(resolve(__dirname, "..", "package"))];
 
 configRoule.set("version", pkg.version); // 设置版本信息
+configRoule.set("projectTree", );
 
 /**
  * 获取配置
