@@ -40,4 +40,5 @@ program.
 if (process.argv.length < 3 ) {
 	process.argv.push("help");
 }
+
 program.parse(process.argv);
