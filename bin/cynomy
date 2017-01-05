@@ -26,15 +26,14 @@ program.
 program.
 	command("install").
 	description("安装cynomy系列软件").
-	action(() => {
-		console.log("安装cynomy框架");
-	});
+	option("-f, --frame <frame>", "基础框架").
+	action(options => require(resolve(__dirname, "..", "lib", "installProject"))(options));
 
 // 创建文件
 program.
 	command("c <file>").
-	description("创建文件").
-	option("-t, --type <type>", "文件类型").
+	description("创建python, javascript, markdown, css, binary, bash 文件").
+	option("-t, --type <type>", "文件类型 js|py|bash").
 	action((file, options) => require(resolve(__dirname, "..", "lib", "createFile"))(file, options));
 
 if (process.argv.length < 3 ) {
