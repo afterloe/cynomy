@@ -2,7 +2,7 @@
   "name": "cynomy",
   "version": "0.0.1",
   "description": "cynomy命令行工具",
-  "main": "index.js",
+  "main": "./bin/cynomy",
   "bin": {
     "cynomy": "./bin/cynomy"
   },
