@@ -9,7 +9,7 @@
 "use strict";
 
 const [program, {resolve}] = [require("commander"), require("path")];
-const config = require(resolve(__dirname, "..", "config"));
+const [config, lib] = [require(resolve(__dirname, "..", "config")), resolve(__dirname, "..", "lib")];
 
 // 设置cynomy客户端命令行版本
 program.version(config.get("version"));
@@ -22,19 +22,27 @@ program.
 		program.outputHelp();
 	});
 
+// git 工具支持
+program.
+	command("push").
+	description("push 代码到对应的git仓库").
+	option("-b, --b <branch>", "分支").
+	option("-r, --remote <remote>", "git仓库").
+	action(options => require(resolve(lib, "gitHelper"))(options));
+
 // 安装框架
 program.
 	command("install").
 	description("安装cynomy系列软件").
 	option("-f, --frame <frame>", "基础框架").
-	action(options => require(resolve(__dirname, "..", "lib", "installProject"))(options));
+	action(options => require(resolve(lib, "installProject"))(options));
 
 // 创建文件
 program.
 	command("c <file>").
 	description("创建python, javascript, markdown, css, binary, bash 文件").
 	option("-t, --type <type>", "文件类型 js|py|bash").
-	action((file, options) => require(resolve(__dirname, "..", "lib", "createFile"))(file, options));
+	action((file, options) => require(resolve(lib, "createFile"))(file, options));
 
 if (process.argv.length < 3 ) {
 	process.argv.push("help");
