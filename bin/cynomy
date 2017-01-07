@@ -26,6 +26,7 @@ program.
 program.
 	command("push").
 	description("push 代码到对应的git仓库").
+	option("-m, --message <message>", "变更内容").
 	option("-b, --b <branch>", "分支").
 	option("-r, --remote <remote>", "git仓库").
 	action(options => require(resolve(lib, "gitHelper"))(options));
