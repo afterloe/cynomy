@@ -42,3 +42,12 @@ commit by afterloe (lm6289511@gmail.com)
 
 ### modify files
 > lib/gitHelper.js  
+
+0.0.1 / 2017-1-8 23:20:36
+==================
+commit by afterloe (lm6289511@gmail.com)
+  * master: 添加强制构建hook
+
+### modify files
+> bin/cynomy  
+> lib/gitHelper.js  

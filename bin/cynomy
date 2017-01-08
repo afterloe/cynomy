@@ -28,7 +28,8 @@ program.
 	description("push 代码到对应的git仓库").
 	option("-m, --message <message>", "变更内容").
 	option("-b, --b <branch>", "分支").
-	option("-r, --remote <remote>", "git仓库").
+	option("-c, --c", "强制构建，如果构建失败则会中断push操作").
+	option("-r, --remote <remote>", "git远程仓库地址").
 	action(options => require(resolve(lib, "gitHelper"))(options));
 
 // 安装框架
