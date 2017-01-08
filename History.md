@@ -26,3 +26,11 @@ commit by afterloe(lm6289511@gmail.com)
 > History.md  
 > lib/gitHelper.js  
 > test/funTest.js  
+
+0.0.1 / 2017-1-8 22:31:57
+==================
+commit by afterloe(lm6289511@gmail.com)
+  * master: 修复push功能失效的问题
+
+### modify files
+> lib/gitHelper.js  
