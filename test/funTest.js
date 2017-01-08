@@ -13,21 +13,18 @@
 
 const {spawn} = require("child_process");
 
-// 显示所有要处理的文件
-// git remote -v | grep push | awk '{print $1}' 查询所有提交地址
-// git branch -v | grep '*' | awk '{print $2}'  查询分支
-// git push origin master                       提交到远程操作
-// git commit -m "msg"                          提交修改
-const remote = spawn("git", ["remote", "-v"]);
-
-remote.stdout.on("data", (data) => {
-  console.log(`stdout: ${data}`);
+const pushCommit = (remote, branch) => new Promise((solve, reject) => {
+  // git push origin master
+  if (!remote && !branch) {
+    solve("done");
+    return ;
+  }
+  const gitPush = spawn("git", ["push", remote, branch]);
+  let buf = new Buffer(0);
+  gitPush.stdout.on("data", chunk => buf = Buffer.concat([buf, chunk], buf.length + chunk.length));
+  gitPush.stderr.on("data", err => reject(new Error(err.toString())));
+  gitPush.on("close", code => 0 === code ? solve(buf.toString()): reject(new Error(`git push ${remote} ${branch} is failed`)));
+  gitPush.on("error", err => reject(err));
 });
 
-remote.stderr.on("data", (data) => {
-  console.log(`stderr: ${data}`);
-});
-
-remote.on("close", (code) => {
-  console.log(`child process exited with code ${code}`);
-});
+pushCommit("origin", "master").then(data => console.log(data)).catch(err => console.log(err));
