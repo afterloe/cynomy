@@ -34,3 +34,11 @@ commit by afterloe(lm6289511@gmail.com)
 
 ### modify files
 > lib/gitHelper.js  
+
+0.0.1 / 2017-1-8 23:8:45
+==================
+commit by afterloe (lm6289511@gmail.com)
+  * master: 优化git提示功能，关闭push异常导致的push进程意外关闭的bug
+
+### modify files
+> lib/gitHelper.js  
