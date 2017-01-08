@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/afterloe/cynomy#readme",
   "dependencies": {
+    "co": "^4.6.0",
     "commander": "^2.9.0"
   },
   "devDependencies": {
