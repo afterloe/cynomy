@@ -18,17 +18,20 @@ program.version(config.get("version"));
 program.
 	command("help").
 	description("显示使用帮助").
-	action(() => {
-		program.outputHelp();
-	});
+	action(() => program.outputHelp());
+
+program.
+	command("test").
+	description("测试项目中的所有测试用例").
+	action(() => require(resolve(lib, "mochaHelper")));
 
 // git 工具支持
 program.
 	command("push").
 	description("push 代码到对应的git仓库").
 	option("-m, --message <message>", "变更内容").
-	option("-b, --b <branch>", "分支").
-	option("-c, --c", "强制构建，如果构建失败则会中断push操作").
+	option("-b, --branch <branch>", "分支").
+	option("-s, --structure [structure]", "强制构建，如果构建失败则会中断push操作").
 	option("-r, --remote <remote>", "git远程仓库地址").
 	action(options => require(resolve(lib, "gitHelper"))(options));
 

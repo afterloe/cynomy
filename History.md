@@ -51,3 +51,13 @@ commit by afterloe (lm6289511@gmail.com)
 ### modify files
 > bin/cynomy  
 > lib/gitHelper.js  
+
+0.0.1 / 2017-1-9 14:26:7
+==================
+commit by afterloe (lm6289511@gmail.com)
+  * master: 启动强制构建命令
+
+### new files
+> test/makeTest.js  ### modify files
+> bin/cynomy  
+> lib/gitHelper.js  
