@@ -88,3 +88,13 @@ commit by afterloe (lm6289511@gmail.com)
 > ../bin/cynomy  
 > ../lib/installProject.js  
 > ../tools/fileSystem.js  
+
+0.0.1 / 2017-1-9 17:40:55
+==================
+commit by afterloe (lm6289511@gmail.com)
+  * master: mocha支持单文件检测
+
+
+### modify files
+> bin/cynomy  
+> lib/mochaHelper.js  

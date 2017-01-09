@@ -24,7 +24,8 @@ program.
 program.
 	command("test").
 	description("测试项目中的所有测试用例").
-	action(() => require(resolve(lib, "mochaHelper"))());
+	option("-s, --single <single>", "运行单一文件").
+	action(options => require(resolve(lib, "mochaHelper"))(options));
 
 // git 工具支持
 program.
