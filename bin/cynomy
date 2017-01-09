@@ -20,10 +20,11 @@ program.
 	description("显示使用帮助").
 	action(() => program.outputHelp());
 
+// 运行测试用例
 program.
 	command("test").
 	description("测试项目中的所有测试用例").
-	action(() => require(resolve(lib, "mochaHelper")));
+	action(() => require(resolve(lib, "mochaHelper"))());
 
 // git 工具支持
 program.

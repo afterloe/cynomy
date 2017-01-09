@@ -74,3 +74,17 @@ commit by afterloe (lm6289511@gmail.com)
 > History.md  
 > bin/cynomy  
 > lib/gitHelper.js  
+
+0.0.1 / 2017-1-9 17:31:37
+==================
+commit by afterloe (lm6289511@gmail.com)
+  * master: 添加mocha支持
+
+
+### new files
+> ../lib/mochaHelper.js  
+> fileSystem_test.js  
+### modify files
+> ../bin/cynomy  
+> ../lib/installProject.js  
+> ../tools/fileSystem.js  
