@@ -58,6 +58,19 @@ commit by afterloe (lm6289511@gmail.com)
   * master: 启动强制构建命令
 
 ### new files
-> test/makeTest.js  ### modify files
+> test/makeTest.js  
+
+### modify files
+> bin/cynomy  
+> lib/gitHelper.js  
+
+0.0.1 / 2017-1-9 14:41:50
+==================
+commit by afterloe (lm6289511@gmail.com)
+  * master: 添加hook关闭自动提交，修复多文件导致文件编码错误的异常
+
+
+### modify files
+> History.md  
 > bin/cynomy  
 > lib/gitHelper.js  
