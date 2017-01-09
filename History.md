@@ -1,9 +1,9 @@
 Cynomy 变动历史
 ###
-> MIT Licensed
-> author: afterloe
-> mail: afterloeliu@jwis.cn
-> webSite: https://github.com/afterloe
+> MIT Licensed  
+> author: afterloe  
+> mail: afterloeliu@jwis.cn  
+> webSite: https://github.com/afterloe  
 
 History.md
 ===
@@ -98,3 +98,13 @@ commit by afterloe (lm6289511@gmail.com)
 ### modify files
 > bin/cynomy  
 > lib/mochaHelper.js  
+
+0.0.1 / 2017-1-9 18:5:14
+==================
+commit by afterloe (lm6289511@gmail.com)
+  * master: 微调创建文件markdown格式
+
+
+### modify files
+> History.md  
+> lib/content.js  
