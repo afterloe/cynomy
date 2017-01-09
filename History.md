@@ -150,3 +150,13 @@ commit by afterloe (lm6289511@gmail.com)
 > package.json  
 > tools/gitExtends.js  
 
+
+0.0.1 / 2017-1-9 23:6:10
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 修复gitHelper不输出的一场
+
+### modify files
+> lib/gitHelper.js  
+
