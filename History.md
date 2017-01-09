@@ -114,7 +114,6 @@ commit by afterloe (lm6289511@gmail.com)
 commit by afterloe (lm6289511@gmail.com)
   * master: git 功能单独抽离
 
-
 ### new files
 > tools/gitExtends.js  
 ### modify files
@@ -123,8 +122,9 @@ commit by afterloe (lm6289511@gmail.com)
 0.0.1 / 2017-1-9 22:8:50
 ==================
 commit by afterloe (lm6289511@gmail.com)
-  * master: 编写fileSystem关于cp命令的单元测试，修复cynomy test -s 传入出现异常，改成了相对目录。修复了cynomy install不复制文件的异常
-
+  * master: 编写fileSystem关于cp命令的单元测试
+  * 修复cynomy test -s 传入出现异常，改成了相对目录
+  * 修复了cynomy install不复制文件的异常
 
 ### modify files
 > lib/createFile.js  
@@ -133,3 +133,20 @@ commit by afterloe (lm6289511@gmail.com)
 > lib/mochaHelper.js  
 > test/fileSystem_test.js  
 > tools/fileSystem.js  
+
+0.0.1 / 2017-1-9 23:2:22
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 修正make强制构建功能，补全makefile
+
+### modify files
+> .gitignore  
+> History.md  
+> Makefile  
+> lib/gitHelper.js  
+> lib/installProject.js  
+> lib/mochaHelper.js  
+> package.json  
+> tools/gitExtends.js  
+

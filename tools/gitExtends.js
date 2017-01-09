@@ -77,7 +77,7 @@ const getRemote = () => new Promise((solve, reject) => {
   grep.stdout.on("data", chunk => awk.stdin.write(chunk));
   grep.stderr.on("data", chunk => reject(new Error(chunk.toString())));
   grep.on("error", err => reject(err));
-  grep.on("close", code => 0 === code? awk.stdin.end(): reject(new Error("grep push is not data here")));
+  grep.on("close", () => awk.stdin.end());
 
   awk.stdout.on("data", chunk => buf = Buffer.concat([buf, chunk], buf.length + chunk.length));
   awk.stderr.on('data', err => reject(new Error(err.toString())));
@@ -103,7 +103,7 @@ const getBranchInfo = () => new Promise((solve, reject) => {
   grep.stdout.on("data", chunk => awk.stdin.write(chunk));
   grep.stderr.on("data", chunk => reject(new Error(chunk.toString())));
   grep.on("error", err => reject(err));
-  grep.on("close", code => 0 === code? awk.stdin.end(): reject(new Error("grep '*' is not data here")));
+  grep.on("close", () => awk.stdin.end());
 
   awk.stdout.on("data", chunk => buf = Buffer.concat([buf, chunk], buf.length + chunk.length));
   awk.stderr.on('data', err => reject(new Error(err.toString())));
@@ -200,7 +200,7 @@ const pushCommit = (remote, branch) => new Promise((solve, reject) => {
       reject(new Error(`git push ${remote} ${branch} is failed`));
       return ;
     }
-    console.log(`[SUCCESS] push ${branch} to ${remote} done.`);
+    console.log(`[SUCCESS] push ${branch} to ${remote} complete.`);
     solve(buf.toString());
   });
 });
@@ -234,7 +234,7 @@ const pushChange = (remote, branch) => new Promise((solve, reject) => {
         for (let i = 0; i < data.length; i++) {
           console.log(data[i]);
         }
-        console.log("[SUCCESS] all remotes push complete done.");
+        console.log("[SUCCESS] all remotes push complete.");
         solve();
       }).catch(err => reject(err));
     }).catch(err => reject(err));
