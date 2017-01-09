@@ -11,7 +11,7 @@
   */
 "use strict";
 
-const [{resolve}, {deepEqual, equal, throws}] = [require("path"), require("assert")];
+const [{resolve, basename}, {deepEqual, equal, throws}, {existsSync, unlinkSync}] = [require("path"), require("assert"), require("fs")];
 const fileSystem = require(resolve(__dirname, "..", "tools", "fileSystem"));
 
 describe("fileSystem", () => {
@@ -78,6 +78,61 @@ describe("fileSystem", () => {
     after(() => {
       hookOne = null;
       hookTwo = null;
+    });
+  });
+
+  describe("#cp", () => {
+    let fileA, fileB, dirA, dirB;
+
+    before(() => {
+      fileA = resolve(__dirname, "..", ".cynomy");
+      fileB = `${Math.random()}.mocha`;
+      dirA = __dirname;
+      dirB = resolve(Math.random() + "", Math.random() + "", Math.random() + "");
+    });
+
+    it("cp an an existing file to this", done => {
+      const [source, target] = [fileA, dirA];
+      fileSystem.cp(source, target).then(() => {
+        const dir = fileSystem.findRoot(dirA, basename(fileA));
+        deepEqual(__dirname, dir);
+        done();
+      }).catch(err => done(err));
+    });
+
+    it("cp an existing file to an unknown location", done => {
+      const [source, target] = [fileA, dirB];
+      fileSystem.cp(source, target).then(() => {
+        done(new Error("can't go here! "));
+      }).catch(() => done());
+    });
+
+    it("cp an unknow file to an existing folder", done => {
+      const [source, target] = [fileB, dirA];
+      fileSystem.cp(source, target).then(() => {
+        done(new Error("can't go here! "));
+      }).catch(() => done());
+    });
+
+    it("cp an unknow file to an unknown location", done => {
+      const [source, target] = [fileB, dirB];
+      fileSystem.cp(source, target).then(() => {
+        done(new Error("can't go here! "));
+      }).catch(() => done());
+    });
+
+    after(done => {
+      const [cpCynomyFile, cpCynomyFilesB] = [resolve(dirA, ".cynomy"), resolve(dirA, fileB)];
+      
+      if (existsSync(cpCynomyFile)) {
+        unlinkSync(cpCynomyFile);
+      }
+
+      if (existsSync(cpCynomyFilesB)) {
+        unlinkSync(cpCynomyFilesB);
+      }
+
+      done();
     });
   });
 });

@@ -119,3 +119,17 @@ commit by afterloe (lm6289511@gmail.com)
 > tools/gitExtends.js  
 ### modify files
 > lib/gitHelper.js  
+
+0.0.1 / 2017-1-9 22:8:50
+==================
+commit by afterloe (lm6289511@gmail.com)
+  * master: 编写fileSystem关于cp命令的单元测试，修复cynomy test -s 传入出现异常，改成了相对目录。修复了cynomy install不复制文件的异常
+
+
+### modify files
+> lib/createFile.js  
+> lib/gitHelper.js  
+> lib/installProject.js  
+> lib/mochaHelper.js  
+> test/fileSystem_test.js  
+> tools/fileSystem.js  
