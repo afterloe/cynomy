@@ -108,3 +108,14 @@ commit by afterloe (lm6289511@gmail.com)
 ### modify files
 > History.md  
 > lib/content.js  
+
+0.0.1 / 2017-1-9 18:21:5
+==================
+commit by afterloe (lm6289511@gmail.com)
+  * master: git 功能单独抽离
+
+
+### new files
+> tools/gitExtends.js  
+### modify files
+> lib/gitHelper.js  
