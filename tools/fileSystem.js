@@ -13,7 +13,6 @@
 
 const [{readdirSync, readFileSync, createReadStream, createWriteStream}, {resolve, basename}, {notDeepStrictEqual}] = [require("fs"), require("path"), require("assert")];
 
-
 /**
  * 读取客制化数据
  *

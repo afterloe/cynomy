@@ -160,3 +160,16 @@ commit by afterloe (lm6289511@gmail.com)
 ### modify files
 > lib/gitHelper.js  
 
+
+0.0.1 / 2017-1-10 21:37:13
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 2017-1-10 21:37:10 commit change.
+
+### new files
+> test/mock/  
+### modify files
+> package.json  
+> tools/fileSystem.js  
+

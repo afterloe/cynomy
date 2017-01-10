@@ -30,6 +30,7 @@
     "istanbul": "^0.4.5",
     "jshint": "^2.9.4",
     "mocha": "^3.2.0",
-    "mochawesome": "^2.0.0"
+    "mochawesome": "^2.0.0",
+    "muk": "^0.5.3"
   }
 }
