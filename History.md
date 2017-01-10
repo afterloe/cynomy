@@ -173,3 +173,13 @@ commit by afterloe (lm6289511@gmail.com)
 > package.json  
 > tools/fileSystem.js  
 
+
+0.0.1 / 2017-1-10 22:28:30
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 2017-1-10 22:28:29 commit change.
+
+### modify files
+> test/fileSystem_test.js  
+

@@ -11,7 +11,7 @@
   */
 "use strict";
 
-const [{resolve, basename}, {deepEqual, equal, throws}, {existsSync, unlinkSync}] = [require("path"), require("assert"), require("fs")];
+const [{resolve, basename}, {notDeepEqual, deepEqual, equal, throws}, {existsSync, unlinkSync}] = [require("path"), require("assert"), require("fs")];
 const fileSystem = require(resolve(__dirname, "..", "tools", "fileSystem"));
 
 describe("fileSystem", () => {
@@ -81,6 +81,39 @@ describe("fileSystem", () => {
     });
   });
 
+  describe("#findUserIndividualization", () => {
+    let dirA, dirB;
+
+    before(() => {
+      dirA = resolve(__dirname, "..");
+      dirB = Math.random() + "/mocha";
+    });
+
+    it("read normal configuration", () => {
+      const configuration = fileSystem.findUserIndividualization(dirA);
+      notDeepEqual({}, configuration);
+    });
+
+    it("read configuration with a not exists dir", () => {
+      throws(() => {
+        const configuration = fileSystem.findUserIndividualization(dirB);
+        deepEqual({}, configuration);
+      }, /configuration file is not fount in this project or you home/);
+    });
+
+    it("read configuration without any params", () => {
+      throws(() => {
+        const configuration = fileSystem.findUserIndividualization();
+        deepEqual({}, configuration);
+      }, /configuration file is not fount in this project or you home/);
+    });
+
+    after(() => {
+      dirA = undefined;
+      dirB = undefined;
+    });
+  });
+
   describe("#cp", () => {
     let fileA, fileB, dirA, dirB;
 
@@ -123,7 +156,7 @@ describe("fileSystem", () => {
 
     after(done => {
       const [cpCynomyFile, cpCynomyFilesB] = [resolve(dirA, ".cynomy"), resolve(dirA, fileB)];
-      
+
       if (existsSync(cpCynomyFile)) {
         unlinkSync(cpCynomyFile);
       }
