@@ -1,7 +1,7 @@
 {
   "name": "cynomy",
-  "version": "0.0.1",
-  "description": "cynomy命令行工具",
+  "version": "0.0.3",
+  "description": "cynomy命令行工具,辅助项目开发,基础项目扩展,集成git功能",
   "main": "./bin/cynomy",
   "bin": {
     "cynomy": "./bin/cynomy"
@@ -14,7 +14,9 @@
     "url": "git+ssh://git@github.com/afterloe/cynomy.git"
   },
   "keywords": [
-    "cynomy"
+    "cynomy",
+	"git",
+	"structure"
   ],
   "author": "afterloe <lm6289511@gmail.com> (https://github.com/afterloe)",
   "license": "MIT",

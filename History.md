@@ -183,3 +183,16 @@ commit by afterloe (lm6289511@gmail.com)
 ### modify files
 > test/fileSystem_test.js  
 
+
+0.0.3 / 2017-1-10 23:21:34
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: readme文件编写
+
+### modify files
+> README.md  
+> package.json  
+### delete files
+> README.md  
+
