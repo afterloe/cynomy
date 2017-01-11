@@ -196,3 +196,17 @@ commit by afterloe (lm6289511@gmail.com)
 ### delete files
 > README.md  
 
+
+0.0.3 / 2017-1-11 16:10:44
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 客制化文件支持version绑定，修复读取工具的version信息，修正关于cynomy中配置的问题
+
+### modify files
+> ../README.md  
+> ../config/index.js  
+> installProject.js  
+### delete files
+> ../README.md  
+

@@ -72,6 +72,7 @@ cynomy 会扫描项目根目录下的.cynomy文件来构建项目，包括提示
 {
 	"author": "项目／文件的作者信息，用于展示在文件头部标识是谁创建的文件",
 	"licensed": "开源方案名可以参考github的",
+	"version", "项目版本信息，用于展示在History中，标识版本",
 	"mail": "邮件地址",
 	"homePage": "个人主页"
 }

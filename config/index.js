@@ -30,10 +30,11 @@ const get = key => configRoule.has(key)? configRoule.get(key) : null;
  * @param {[String]} mail     [开发者邮箱]
  * @param {[String]} homePage [开发者web页]
  */
-const setIndividualization = ({author = process.env.LOGNAME, licensed = "", mail = "", homePage = ""}) => {
+const setIndividualization = ({version = pkg.version, author = process.env.LOGNAME, licensed = "", mail = "", homePage = ""}) => {
 		configRoule.set("author", author); // 设置作者信息
 		configRoule.set("licensed", licensed); // 设置开源协议信息
 		configRoule.set("mail", mail); // 设置邮件信息
+		configRoule.set("version", version); // 设置项目客制化版本信息
 		configRoule.set("homePage", homePage); // 设置首页信息
 };
 
