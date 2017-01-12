@@ -210,3 +210,13 @@ commit by afterloe (lm6289511@gmail.com)
 ### delete files
 > ../README.md  
 
+
+0.0.3 / 2017-1-12 20:55:12
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 项目日常维护
+
+### modify files
+> lib/mochaHelper.js  
+
