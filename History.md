@@ -220,3 +220,13 @@ commit by afterloe (lm6289511@gmail.com)
 ### modify files
 > lib/mochaHelper.js  
 
+
+0.0.3 / 2017-1-15 22:49:56
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 添加jade模板的支持
+
+### modify files
+> lib/content.js  
+
