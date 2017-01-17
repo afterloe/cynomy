@@ -230,3 +230,15 @@ commit by afterloe (lm6289511@gmail.com)
 ### modify files
 > lib/content.js  
 
+
+1.0.2 / 2017-1-17 10:20:55
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 模板升级，GitHub提交信息添加了对本地版本库的支持，同时优化了查询项目根节点的问题
+
+### modify files
+> .cynomy  
+> lib/content.js  
+> lib/gitHelper.js  
+
