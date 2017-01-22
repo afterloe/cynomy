@@ -235,10 +235,24 @@ commit by afterloe (lm6289511@gmail.com)
 ==================
 commit by afterloe (lm6289511@gmail.com)
 
-  * master: 模板升级，GitHub提交信息添加了对本地版本库的支持，同时优化了查询项目根节点的问题
+  * master: 模板升级
+  * GitHub提交信息添加了对本地版本库的支持
+  * 优化了查询项目根节点的问题
 
 ### modify files
 > .cynomy  
 > lib/content.js  
+> lib/gitHelper.js  
+
+
+1.0.2 / 2017-1-22 21:44:54
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 修正多个文件类型的改进的时候文件名输出被同化
+
+
+### modify files
+> History.md  
 > lib/gitHelper.js  
 
