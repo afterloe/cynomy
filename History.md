@@ -267,3 +267,14 @@ commit by afterloe (lm6289511@gmail.com)
 ### modify files
 > lib/content.js  
 
+
+1.0.2 / 2017-2-2 14:42:34
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 升级html5模板
+
+
+### modify files
+> lib/content.js  
+
