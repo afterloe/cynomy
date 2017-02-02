@@ -256,3 +256,14 @@ commit by afterloe (lm6289511@gmail.com)
 > History.md  
 > lib/gitHelper.js  
 
+
+1.0.2 / 2017-2-2 14:38:21
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: html模板升级支持html5
+
+
+### modify files
+> lib/content.js  
+
