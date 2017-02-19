@@ -278,3 +278,14 @@ commit by afterloe (lm6289511@gmail.com)
 ### modify files
 > lib/content.js  
 
+
+1.0.2 / 2017-2-19 21:26:50
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 修改python 文件启动失败的原因
+
+
+### modify files
+> lib/content.js  
+
